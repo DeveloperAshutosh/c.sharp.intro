@@ -16,6 +16,13 @@ namespace c.sharp.intro
             and we end our multi-line comments with an astersik and forward slash
             */
             Console.WriteLine("Hello, " + myName);
+            Console.WriteLine("please enter your name...");
+
+            // assign variable 'username to a value entered bu the user
+            string userName = Console.ReadLine();
+            Console.WriteLine("you have entered: " + userName);
+            Console.WriteLine("Hey {0} you are looking great today", userName);
+
         }
     }
 }
