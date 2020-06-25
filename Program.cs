@@ -6,36 +6,53 @@ namespace c.sharp.intro
     {
         static void Main(string[] args)
         {
-            int myNum = 3;
-            
-            while( myNum > 0 ) //itrates loops while the condition is true.
+            //guid the user to enter the action
+            Console.WriteLine("Please enter add/ sbstract / multiply / exit");
+            string userInput;
+            while ( ( userInput  = Console.ReadLine()) != "exit")//loops untill the user enter exit
             {
-                Console.WriteLine("currents number is: {0}", myNum);
-                myNum--;
-            }
-            /*
-            for loop has three semi- colon - seprated components:
-                1 assignment.
-                2[Termination] condition.
-                3 Interation.
-            */
-            for ( int i = 0; i < 6; i+=2 )
-            {
-                Console.WriteLine("current (for)  number is : {0}", i);
+                int firstNum;
+                int secondNum;
+                int result;
+                //switch is similar to if/else statement
+                switch( userInput)
+                {
+                    //cases are used to check the specific values.
+                    case "add":
+                    Console.WriteLine("enter first number for addition");
+                    firstNum = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("enter second number for addition");
+                    secondNum = Int32.Parse(Console.ReadLine());
+                    result = firstNum + secondNum;
+                    Console.WriteLine("{0} + {1} ={2} :",firstNum,secondNum,result);
 
-            }
-            //if we want intration from a list use foreach loop
-            //From Warren Uhrich to Everyone:  03:14 PM
-            //https:docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in
+                    break;
+                    case "substract":
+                    Console.WriteLine("enter first number for substraction");
+                    firstNum = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("enter second number for substraction");
+                    secondNum = Int32.Parse(Console.ReadLine());
+                    result = firstNum - secondNum;
+                    Console.WriteLine("{0} - {1} ={2} :",firstNum,secondNum,result);
+                    break;
+                    case "multiply":
+                    Console.WriteLine("enter first number for multiplycation");
+                    firstNum = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("enter second number for multiplycation");
+                    secondNum = Int32.Parse(Console.ReadLine());
+                    result = firstNum * secondNum;
+                    Console.WriteLine("{0} * {1} ={2} :",firstNum,secondNum,result);
+
+                    break;
+                    default:
+                    Console.WriteLine("unrecognised operator");
+                    break;
 
 
-            string [] myList = {"cat","turtle","lizard","frog","dog"};
-            foreach( string listitem in myList)
-            {
-                Console.WriteLine(" The current item is : {0}", listitem);
+                }
+                Console.WriteLine("Please enter a new command: add/sbstract/multiply");
+                
             }
-           
-   
         }
     }
 }
