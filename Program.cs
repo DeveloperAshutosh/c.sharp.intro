@@ -6,25 +6,34 @@ namespace c.sharp.intro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number");
-           int userInt = Int32.Parse (Console.ReadLine() );
-           if (userInt > 10 )
-           {
-               Console.WriteLine("Greater than 10");
-           }
-            else if ( userInt > 5 )
+            int myNum = 3;
+            
+            while( myNum > 0 ) //itrates loops while the condition is true.
             {
-                Console.WriteLine( "Greater than 5 but less than 11." );
+                Console.WriteLine("currents number is: {0}", myNum);
+                myNum--;
             }
-            else if ( userInt < 0 )
+            /*
+            for loop has three semi- colon - seprated components:
+                1 assignment.
+                2[Termination] condition.
+                3 Interation.
+            */
+            for ( int i = 0; i < 6; i+=2 )
             {
-                Console.WriteLine( "A negative number." );
-            }
-            else
-            {
-                Console.WriteLine( "Number is between 0 and 5." );
-            }
+                Console.WriteLine("current (for)  number is : {0}", i);
 
+            }
+            //if we want intration from a list use foreach loop
+            //From Warren Uhrich to Everyone:  03:14 PM
+            //https:docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in
+
+
+            string [] myList = {"cat","turtle","lizard","frog","dog"};
+            foreach( string listitem in myList)
+            {
+                Console.WriteLine(" The current item is : {0}", listitem);
+            }
            
    
         }
