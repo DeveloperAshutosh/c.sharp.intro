@@ -28,7 +28,32 @@ namespace c.sharp.intro
             Console.WriteLine( myInt + 8 ); //50
 
 
-            Console.WriteLine("3" + "3");
+            Console.WriteLine("3" + "3");//33
+            Console.WriteLine("3" + 3);//33
+            Console.WriteLine(3 + "3");//33
+            Console.WriteLine(3 + 6 + "3");//93
+            //output our variable.
+            Console.WriteLine( myInt); //42
+            //A new assignment for existing variable.
+            myInt = myInt +2;//44
+            Console.WriteLine(myInt);//44
+
+           //myInt = myInt +"2"; // we cant turn myInt into string .
+
+            myInt++; //Thae same as typing myInt = myInt+1.
+            Console.WriteLine(myInt); //45
+
+            myInt--; //The same as typing myInt = myInt -1.
+            Console.WriteLine(myInt); //44
+
+            myInt +=3; //The same as typing myInt = myInt + 3
+            Console.WriteLine(myInt); //47
+            myInt -= 5; //The same as typing myInt = myInt - 5.
+            Console.WriteLine(myInt); //42
+
+
+
+
 
     
            
