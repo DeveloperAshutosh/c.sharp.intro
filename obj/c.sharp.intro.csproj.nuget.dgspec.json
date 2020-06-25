@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dimpl\\Projects\\c.sharp.intro\\c.sharp.intro.csproj": {}
+    "C:\\Users\\dimpl\\projects\\c.sharp.intro\\c.sharp.intro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dimpl\\Projects\\c.sharp.intro\\c.sharp.intro.csproj": {
+    "C:\\Users\\dimpl\\projects\\c.sharp.intro\\c.sharp.intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dimpl\\Projects\\c.sharp.intro\\c.sharp.intro.csproj",
+        "projectUniqueName": "C:\\Users\\dimpl\\projects\\c.sharp.intro\\c.sharp.intro.csproj",
         "projectName": "c.sharp.intro",
-        "projectPath": "C:\\Users\\dimpl\\Projects\\c.sharp.intro\\c.sharp.intro.csproj",
+        "projectPath": "C:\\Users\\dimpl\\projects\\c.sharp.intro\\c.sharp.intro.csproj",
         "packagesPath": "C:\\Users\\dimpl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dimpl\\Projects\\c.sharp.intro\\obj\\",
+        "outputPath": "C:\\Users\\dimpl\\projects\\c.sharp.intro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
