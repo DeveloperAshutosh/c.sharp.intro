@@ -6,53 +6,25 @@ namespace c.sharp.intro
     {
         static void Main(string[] args)
         {
-            //guid the user to enter the action
-            Console.WriteLine("Please enter add/ sbstract / multiply / exit");
-            string userInput;
-            while ( ( userInput  = Console.ReadLine()) != "exit")//loops untill the user enter exit
+           // 2 dimensional array!
+            string[,] topics = {{"cat","dog","frog","hedgehog"},
+                                {"zebra","giraffe","lion","elephant"},
+                                {"dolphin","octopus","shark","whale"}};
+            // Loop through the rows...
+            for( int row = 0; row < topics.GetLength(0); row++ )
             {
-                int firstNum;
-                int secondNum;
-                int result;
-                //switch is similar to if/else statement
-                switch( userInput)
+                // Output current row...
+                Console.WriteLine( "Starting row #{0}", row );
+                // Loop through columns in the current row...
+                for ( int column = 0; column < topics.GetLength(1); column++ )
                 {
-                    //cases are used to check the specific values.
-                    case "add":
-                    Console.WriteLine("enter first number for addition");
-                    firstNum = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("enter second number for addition");
-                    secondNum = Int32.Parse(Console.ReadLine());
-                    result = firstNum + secondNum;
-                    Console.WriteLine("{0} + {1} ={2} :",firstNum,secondNum,result);
-
-                    break;
-                    case "substract":
-                    Console.WriteLine("enter first number for substraction");
-                    firstNum = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("enter second number for substraction");
-                    secondNum = Int32.Parse(Console.ReadLine());
-                    result = firstNum - secondNum;
-                    Console.WriteLine("{0} - {1} ={2} :",firstNum,secondNum,result);
-                    break;
-                    case "multiply":
-                    Console.WriteLine("enter first number for multiplycation");
-                    firstNum = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("enter second number for multiplycation");
-                    secondNum = Int32.Parse(Console.ReadLine());
-                    result = firstNum * secondNum;
-                    Console.WriteLine("{0} * {1} ={2} :",firstNum,secondNum,result);
-
-                    break;
-                    default:
-                    Console.WriteLine("unrecognised operator");
-                    break;
-
-
+                    // Output the current column...
+                    Console.WriteLine( "Starting column #{0}", column );
+                    // Output the current animal!
+                    Console.WriteLine( "This animal is: {0}", topics[row,column] );
                 }
-                Console.WriteLine("Please enter a new command: add/sbstract/multiply");
-                
             }
+
         }
     }
 }
