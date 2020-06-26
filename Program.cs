@@ -14,9 +14,9 @@ namespace c.sharp.intro
                if(command == "add")
                {
                    Console.WriteLine("please enter first number to add");
-                   int firstnum = int.Parse(Console.ReadLine() );
+                   int firstnum = collectIntfromuser();
                    Console.WriteLine("please enter second number to add");
-                   int secondnum = int.Parse(Console.ReadLine() );
+                   int secondnum = collectIntfromuser();
                    result = Addition(firstnum , secondnum);
                      Console.WriteLine("the result is : {0}", result);
                    
@@ -24,9 +24,9 @@ namespace c.sharp.intro
                else if(command == "subtract")
                {
                     Console.WriteLine("please enter first number to subtract");
-                   int firstnum = int.Parse(Console.ReadLine() );
+                   int firstnum = collectIntfromuser();
                    Console.WriteLine("please enter second number to subtract");
-                   int secondnum = int.Parse(Console.ReadLine() );
+                   int secondnum = collectIntfromuser();
                    result = subtraction(firstnum , secondnum);
                    Console.WriteLine("the result is : {0}", result);
 
@@ -47,6 +47,27 @@ namespace c.sharp.intro
         static int subtraction(int num1 , int num2)
         {
             return num1 - num2;
+        }
+        static int collectIntfromuser()
+        {
+            int intvalue = 0;
+            bool error = true;
+            while(error == true )
+            {
+                string uservalue = Console.ReadLine();
+                try 
+                {
+                     intvalue = int.Parse(uservalue);
+                     error = false;
+                    
+                }
+                catch(Exception exception )
+                {
+                    Console.WriteLine("invalid value is entered please enter valid value:");
+                    Console.WriteLine(exception.Message);//exception has its own message- helpfull
+                }
+            }
+            return intvalue;
         }
     }
 }
